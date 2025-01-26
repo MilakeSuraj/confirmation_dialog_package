@@ -27,7 +27,7 @@ void showCustomDialog({
       borderRadius: BorderRadius.circular(7.37),
     ),
     backgroundColor: backgroundColor,
-    child: Container(
+    child: SizedBox(
       width: 257,
       height: 175.7,
       child: Column(

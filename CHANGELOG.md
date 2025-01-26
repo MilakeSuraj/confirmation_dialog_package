@@ -1,3 +1,6 @@
+# Changelog
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+- Initial release of `confirmation_dialog_package`.
+- Added customizable animated dialogs.

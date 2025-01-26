@@ -1,29 +1,40 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:example/main.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+  testWidgets('Custom dialog shows and functions correctly',
+      (WidgetTester tester) async {
+    // Build the app
+    await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify the button exists on the main screen
+    expect(find.text('Show Custom Dialog'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Tap the button to show the dialog
+    await tester.tap(find.text('Show Custom Dialog'));
+    await tester.pumpAndSettle();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify the dialog appears with the correct title and message
+    expect(find.text('Delete Item?'), findsOneWidget);
+    expect(find.text('Are you sure you want to delete this item?'),
+        findsOneWidget);
+
+    // Verify the dialog buttons exist
+    expect(find.text('No'), findsOneWidget);
+    expect(find.text('Yes'), findsOneWidget);
+
+    // Tap the "No" button and verify the dialog disappears
+    await tester.tap(find.text('No'));
+    await tester.pumpAndSettle();
+    expect(find.text('Delete Item?'), findsNothing);
+
+    // Tap the button to show the dialog again
+    await tester.tap(find.text('Show Custom Dialog'));
+    await tester.pumpAndSettle();
+
+    // Tap the "Yes" button and verify the dialog disappears
+    await tester.tap(find.text('Yes'));
+    await tester.pumpAndSettle();
+    expect(find.text('Delete Item?'), findsNothing);
   });
 }
