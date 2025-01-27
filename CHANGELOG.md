@@ -1,3 +1,6 @@
-## [0.0.4] - 2025-01-27
+# Changelog
 
-- Changed package name to `animated_confirm_dialog`.
+## 0.0.1
+
+- Initial release of `confirmation_dialog_package`.
+- Added customizable animated dialogs.

@@ -14,5 +14,5 @@ Add the package to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  animated_confirm_dialog: ^0.0.4
+  confirmation_dialog_package: ^0.0.1
 ```
