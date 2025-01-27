@@ -1,6 +1,6 @@
 name: confirmation_dialog_package
 description: A Flutter package for customizable confirmation dialogs with optional 3D flip animations and a modern UI.
-version: 0.0.2
+version: 0.0.4
 homepage: https://github.com/MilakeSuraj/confirmation_dialog_package
 issue_tracker: https://github.com/MilakeSuraj/confirmation_dialog_package/issues
 
