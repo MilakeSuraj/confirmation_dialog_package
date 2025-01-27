@@ -1,6 +1,10 @@
-# Changelog
+## [0.0.4] - 2025-01-27
 
-## 0.0.1
+### Added
 
-- Initial release of `confirmation_dialog_package`.
-- Added customizable animated dialogs.
+- Enhanced 3D flip animations for confirmation dialogs.
+- Added more customization options for UI themes.
+
+### Fixed
+
+- Minor bug fixes related to button animations.
