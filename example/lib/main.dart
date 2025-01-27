@@ -1,4 +1,4 @@
-import 'package:animated_confirm_dialog/animated_confirm_dialog.dart';
+import 'package:confirmation_dialog_package/confirmation_dialog_package.dart';
 import 'package:flutter/material.dart';
 
 void main() {
