@@ -14,5 +14,5 @@ Add the package to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  confirmation_dialog_package: ^1.0.4
+  confirmation_dialog_package: ^1.0.5
 ```
